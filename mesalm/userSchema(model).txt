@@ -1,0 +1,79 @@
+const UserSchema = new mongoose.Schema({
+  name: {
+    type: ,
+    required: ,
+    trim: ,
+    maxlength: 
+  },
+  email: {
+    type: ,
+    required: ,
+    unique: ,
+    lowercase: ,
+    match:
+  },
+  password: {
+    type: ,
+    required: ,
+    minlength:,
+    select: 
+  },
+  role: {
+    type: ,
+    enum: ,
+    required: 
+ },
+  profile: {
+    avatar: {
+      type: ,
+      default: ''
+    },
+    phone: {
+      type: ,
+      default: ''
+    },
+    location: {
+      type: ,
+      default: ''
+    },
+    bio: {
+      type: ,
+      maxlength: ,
+      default: ''
+    },
+    linkedin: {
+      type: ,
+      default: ''
+    },
+    website: {
+      type: ,
+      default: ''
+    }
+  },
+  isVerified: {
+    type: ,
+    default: 
+  },
+  otp: {
+    type: ,
+    select: 
+  },
+  otpExpire: {
+    type: ,
+    select: 
+  },
+  resetPasswordToken: {
+    type: ,
+    select: 
+  },
+  resetPasswordExpire: {
+    type: ,
+    select: 
+  },
+  createdAt: {
+    type: ,
+    default: Date.now
+  }
+}, {
+  timestamps: true
+});
